@@ -11,7 +11,7 @@ class AdminTest(TestCase):
             password="test12345"
         )
         self.client.force_login(self.user_model)
-        self.author = get_user_model().objects.create(
+        self.author = get_user_model().objects.create_user(
             username="vas",
             password="vas12345",
             license_number="ASD12345"

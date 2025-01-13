@@ -9,7 +9,7 @@ class ModelsTest(TestCase):
         self.assertEqual(manufacturer.name, "test")
 
     def test_driver_str(self):
-        driver = get_user_model().objects.create(
+        driver = get_user_model().objects.create_user(
             username="test",
             password="test12345",
             first_name="test1",
@@ -25,7 +25,7 @@ class ModelsTest(TestCase):
         self.assertEqual(str(car), "lamba")
 
     def test_driver_license_number(self):
-        driver = get_user_model().objects.create(
+        driver = get_user_model().objects.create_user(
             username="test",
             license_number="WRT12345"
         )
